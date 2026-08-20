@@ -14,9 +14,17 @@ This pack combines three previously separate node packs into one:
 Cloning this repository into ComfyUI's `custom_nodes` folder and restarting
 ComfyUI is enough for every node to be discovered. All nodes share a single
 "Ole NodePack" category in the ComfyUI node search/menu.
-"""
 
-from comfy_api.latest import ComfyExtension, io
+Note: ComfyUI's custom node loader (see `load_custom_node` in `nodes.py`)
+registers a package using *either* its legacy `NODE_CLASS_MAPPINGS` *or* its
+`comfy_entrypoint`/`ComfyExtension` (V3 schema) hook, never both, from a
+single `__init__.py`. Ideogram4PromptBuilderOLE is a V3 `io.ComfyNode`, but
+`io.ComfyNode` subclasses remain fully compatible with the legacy mapping
+(their `INPUT_TYPES`/`CATEGORY`/`RETURN_TYPES`/etc. are lazily derived from
+`define_schema()`), so it is registered through `NODE_CLASS_MAPPINGS` here
+alongside the Ideogram Wildcard nodes, keeping every node in this pack
+discoverable together.
+"""
 
 from .ole_nodepack.ideogram_4_prompt_builder import Ideogram4PromptBuilderOLE
 from .ole_nodepack.ideogram_wildcard_node import (
@@ -26,32 +34,22 @@ from .ole_nodepack.ideogram_wildcard_node import (
 
 # Front-end assets (the prompt builder's canvas editor and the resolution
 # sync script) live in ./web and are picked up by ComfyUI independently of
-# comfy_entrypoint, based on this module-level variable.
+# node registration, based on this module-level variable.
 WEB_DIRECTORY = "./web"
 
-# Legacy-style registration, used by the Ideogram Wildcard nodes.
 NODE_CLASS_MAPPINGS = {
+    "Ideogram4PromptBuilderOLE": Ideogram4PromptBuilderOLE,
     "IdeogramWildcardNode": IdeogramWildcardNode,
     "IdeogramWildcardCLIPEncode": IdeogramWildcardCLIPEncode,
 }
 NODE_DISPLAY_NAME_MAPPINGS = {
+    "Ideogram4PromptBuilderOLE": "Ideogram 4 Prompt Builder",
     "IdeogramWildcardNode": "Ideogram Wildcard Prompt",
     "IdeogramWildcardCLIPEncode": "Ideogram Wildcard CLIP Encode",
 }
-
-
-class OleNodePackExtension(ComfyExtension):
-    async def get_node_list(self) -> list[type[io.ComfyNode]]:
-        return [Ideogram4PromptBuilderOLE]
-
-
-async def comfy_entrypoint() -> OleNodePackExtension:
-    return OleNodePackExtension()
-
 
 __all__ = [
     "NODE_CLASS_MAPPINGS",
     "NODE_DISPLAY_NAME_MAPPINGS",
     "WEB_DIRECTORY",
-    "comfy_entrypoint",
 ]
