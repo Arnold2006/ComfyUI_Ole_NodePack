@@ -25,7 +25,7 @@ class IdeogramWildcardNode:
 
     RETURN_TYPES = ("STRING",)
     FUNCTION = "resolve"
-    CATEGORY = "Ideogram"
+    CATEGORY = "Ole NodePack"
 
     def resolve(self, prompt, seed):
         rng = random.Random(seed)
@@ -102,7 +102,7 @@ class IdeogramWildcardCLIPEncode:
     RETURN_TYPES = ("CONDITIONING", "STRING")
     RETURN_NAMES = ("conditioning", "decoded_prompt")
     FUNCTION = "encode"
-    CATEGORY = "Ideogram"
+    CATEGORY = "Ole NodePack"
     OUTPUT_NODE = False
 
     @classmethod

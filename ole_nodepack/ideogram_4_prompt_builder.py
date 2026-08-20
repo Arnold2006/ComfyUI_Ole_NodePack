@@ -233,7 +233,7 @@ class Ideogram4PromptBuilderOLE(io.ComfyNode):
         return io.Schema(
             node_id="Ideogram4PromptBuilderOLE",
             display_name="Ideogram 4 Prompt Builder",
-            category="OLENodes/text",
+            category="Ole NodePack",
             search_aliases=["ideogram", "caption", "bbox", "prompt builder", "json prompt"],
             is_experimental=True,
             description="""
