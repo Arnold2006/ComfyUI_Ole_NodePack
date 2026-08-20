@@ -64,6 +64,8 @@ are ignored). Add your own wildcards by creating a new file inside
    ```bash
    cd ComfyUI_Ole_NodePack
    pip install -r requirements.txt
+
+   G:\ComfyUI\python_embeded\python.exe -m pip install -r G:\ComfyUI\ComfyUI\custom_nodes\ComfyUI_Ole_NodePack\requirements.txt
    ```
 
 3. Restart ComfyUI. All nodes register themselves automatically on startup.
