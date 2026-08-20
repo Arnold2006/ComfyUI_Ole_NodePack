@@ -1,0 +1,26 @@
+# Ideogram lighting
+Low-key, directional ambient light from the left, casting deep shadows and highlighting textures
+Golden hour glow, warm directional sunlight raking across the subject at a low angle
+Soft diffused overcast light, evenly wrapping the subject with minimal shadow contrast
+High-contrast chiaroscuro lighting, single hard source carving dramatic shadow and highlight
+Backlit silhouette, strong rim light outlining the subject against a bright background
+Candlelit ambience, flickering warm light source casting soft, irregular shadows
+Studio softbox lighting, controlled and even, subtly sculpting form with gentle falloff
+Neon-lit environment, saturated colored light spilling across surfaces and reflective textures
+Moonlit scene, cool blue directional light with deep, soft-edged shadows
+Overhead fluorescent lighting, flat and slightly clinical with faint greenish cast
+Volumetric light rays, sunbeams cutting through haze or dust suspended in the air
+Window light, soft directional falloff from one side creating gentle gradient shadows
+Dappled light through foliage, fragmented patterns of light and shadow across the scene
+Firelight, warm flickering glow with strong orange undertones and moving shadows
+Late afternoon side lighting, long shadows stretching across the frame with warm color temperature
+Foggy diffused light, soft and directionless, muting contrast and softening edges
+Practical in-scene lighting, mixed color temperatures from lamps and signage creating uneven pools of light
+Twilight blue hour lighting, cool ambient tones with lingering warmth on the horizon
+Harsh midday sunlight, strong overhead source producing short, dense shadows
+Spotlighted subject against a dark, underexposed background for isolated dramatic focus
+Underwater caustic lighting, rippling refracted patterns dancing across surfaces
+Overexposed, blown-out highlights with a hazy, sun-drenched atmosphere
+Ambient ring light, soft and frontal, minimizing shadow for a flattering even glow
+Stormy diffused light, cool and heavy with a low, oppressive quality
+Bioluminescent glow, soft self-illuminating light emanating from within the subject
