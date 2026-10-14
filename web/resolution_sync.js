@@ -9,6 +9,8 @@ const ASPECT_RATIOS = {
   "2:3 (Portrait Photo)": [2, 3],
   "3:4 (Portrait Standard)": [3, 4],
   "9:16 (Portrait Widescreen)": [9, 16],
+  "5:7 (Portrait Photo)": [5, 7],
+  "7:5 (Landscape Photo)": [7, 5],
 };
 
 // Target node types to sync into, in priority order, each with the rounding
